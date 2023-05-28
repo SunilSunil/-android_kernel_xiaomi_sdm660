@@ -403,6 +403,7 @@ KBUILD_LDFLAGS_MODULE := -T $(srctree)/scripts/module-common.lds
 CLANG_FLAGS :=
 HOSTLDFLAGS	+= -fuse-ld=lld
 HOSTCFLAGS	+= -fuse-ld=lld
+HOSTCFLAGS	+= -fuse-ld=lld -Wno-unused-command-line-argument
 
 # Read KERNELRELEASE from include/config/kernel.release (if it exists)
 KERNELRELEASE = $(shell cat include/config/kernel.release 2> /dev/null)
